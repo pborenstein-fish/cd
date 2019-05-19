@@ -5,10 +5,10 @@ function cd --description "Change directory"
     set -l MAX_DIR_HIST 25
 
     # create directory if it doesn't exist
-    
-    if test $argv[1] = "-p"
-      set argv $argv[2]
-      mkdir -p $argv
+
+    if test "$argv[1]" = "-p"
+        set argv $argv[2]
+        mkdir -p $argv
     end
 
     if test (count $argv) -gt 1
