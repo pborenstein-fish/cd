@@ -1,9 +1,11 @@
-#
-# Wrap the builtin cd command to maintain directory history.
-#
+# cd is a function with definition
+# Defined in /usr/local/Cellar/fish/3.0.2/share/fish/functions/cd.fish @ line 4
+
 function cd --description "Change directory"
     set -l MAX_DIR_HIST 25
 
+    # create directory if it doesn't exist
+    
     if test $argv[1] = "-p"
       set argv $argv[2]
       mkdir -p $argv
